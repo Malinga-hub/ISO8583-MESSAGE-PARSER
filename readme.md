@@ -1,4 +1,4 @@
-# ISO 8583 Message Parser 
+# ISO 8583:1993 Message Parser 
 ### java implementation using springboot 3
 
 # TECH STACK
