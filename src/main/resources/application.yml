@@ -1,0 +1,35 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: ISO8583Parser
+  datasource:
+    url: jdbc:mysql://localhost:3306/iso_8583_db?createDatabaseIfNotExist=true&autoConnect=true&allowPublicKeyRetrieval=true
+    username: root
+    password: Simz@098
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+
+iso-8583:
+  iso-spec-definition:
+    - field-name: MESSAGE_HEADER
+      field-number: -1
+      field-type: an
+      field-length: 21
+      field-length-type: "fixed-length"
+      field-description: "Message Header"
+    - field-name: MTI
+      field-number: 0
+      field-type: n
+      field-length: 4
+      field-length-type: "fixed-length"
+      field-description: "Message Type Identifier"
+    - field-name: BITMAP
+      field-number: 1
+      field-type: n
+      field-length: 16
+      field-length-type: "fixed-length"
+      field-description: "Bit maps"
+

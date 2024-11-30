@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss}] [%t] %-5level %logger{36} [%M] - %msg%n</property>
+        <property name="LOG_DIR">$${env:logpath:-/opt/spring/logs/iso-8583-parser}</property>
+        <property name="DEBUG_LOG">app-debug</property>
+        <property name="MAX_SIZE">100MB</property>
+        <property name="MAX_INDEX">20</property>
+        <property name="DEFAULT_PACKAGE">com.malinga.ISO8583Parser</property>
+    </Properties>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <!--        main debug-->
+        <RollingFile name="debugLog" fileName="${LOG_DIR}/${DEBUG_LOG}.log"
+                     filePattern="${LOG_DIR}/$${date:yyyy}/$${date:MM}/${DEBUG_LOG}-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <!-- Roll the log file at midnight each day -->
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <SizeBasedTriggeringPolicy size="${MAX_SIZE}" />
+            </Policies>
+            <DefaultRolloverStrategy max="${MAX_INDEX}"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <!--        main debug-->
+        <Logger name="${DEFAULT_PACKAGE}" additivity="false" level="debug">
+            <AppenderRef ref="debugLog" />
+            <AppenderRef ref="console" />
+        </Logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>
