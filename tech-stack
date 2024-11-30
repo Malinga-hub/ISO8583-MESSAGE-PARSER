@@ -1,0 +1,8 @@
+framework: springboot 3.4
+language: java 21 (LTS)
+front-end: Thymeleaf, Javascript
+backend: springboot
+database: mysql 8
+authentication: Auth0 - free account
+authorization: custom role_permission implementationn
+Theme: tabler-v1.0.0-beta20 (free open source dashboard)
