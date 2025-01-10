@@ -11,5 +11,5 @@ public class BitMapDto {
     private String bitmap;
     private boolean isSecondaryBitMapPresent;
     private String bitmapBinaryBCD;
-    private List<Integer> dataElements;
+    private List<Integer> dataElementsPresent;
 }

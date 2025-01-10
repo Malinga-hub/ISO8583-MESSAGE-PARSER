@@ -32,4 +32,237 @@ iso-8583:
       field-length: 16
       field-length-type: "fixed-length"
       field-description: "Bit maps"
-
+    - field-name: FIELD_2
+      field-number: 2
+      field-type: nllvar
+      field-length: 19
+      field-length-type: "variable-length"
+      field-description: "Primary Account Number (PAN)"
+    - field-name: FIELD_3
+      field-number: 3
+      field-type: n
+      field-length: 6
+      field-length-type: "fixed-length"
+      field-description: "Processing Code"
+    - field-name: FIELD_4
+      field-number: 4
+      field-type: n
+      field-length: 12
+      field-length-type: "fixed-length"
+      field-description: "Amount, Transaction"
+    - field-name: FIELD_5
+      field-number: 5
+      field-type: n
+      field-length: 12
+      field-length-type: "fixed-length"
+      field-description: "Amount, Settlement"
+    - field-name: FIELD_6
+      field-number: 6
+      field-type: n
+      field-length: 12
+      field-length-type: "fixed-length"
+      field-description: "Amount Cardholder Billing"
+    - field-name: FIELD_7
+      field-number: 7
+      field-type: n
+      field-length: 10
+      field-length-type: "fixed-length"
+      field-description: "Transmission Date And Time"
+    - field-name: FIELD_9
+      field-number: 9
+      field-type: n
+      field-length: 10
+      field-length-type: "fixed-length"
+      field-description: "Transmission Date And Time"
+    - field-name: FIELD_10
+      field-number: 10
+      field-type: n
+      field-length: 8
+      field-length-type: "fixed-length"
+      field-description: "Conversion Rate, Cardholder Billing"
+    - field-name: FIELD_11
+      field-number: 11
+      field-type: n
+      field-length: 6
+      field-length-type: "fixed-length"
+      field-description: "Systems Trace Audit Number (STAN)"
+    - field-name: FIELD_12
+      field-number: 12
+      field-type: n
+      field-length: 12
+      field-length-type: "fixed-length"
+      field-description: "Date And Time, Local Transaction"
+    - field-name: FIELD_14
+      field-number: 14
+      field-type: n
+      field-length: 4
+      field-length-type: "fixed-length"
+      field-description: "Date, Expiration"
+    - field-name: FIELD_16
+      field-number: 16
+      field-type: n
+      field-length: 4
+      field-length-type: "fixed-length"
+      field-description: "Date, Conversion"
+    - field-name: FIELD_17
+      field-number: 17
+      field-type: n
+      field-length: 4
+      field-length-type: "fixed-length"
+      field-description: "Date, Capture"
+    - field-name: FIELD_19
+      field-number: 19
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Acquiring Institution Country Code"
+    - field-name: FIELD_20
+      field-number: 20
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Country Code, Primary Account Number"
+    - field-name: FIELD_21
+      field-number: 21
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Country Code, Forwarding Institution"
+    - field-name: FIELD_22
+      field-number: 22
+      field-type: an
+      field-length: 12
+      field-length-type: "fixed-length"
+      field-description: "Point Of Service Data Code"
+    - field-name: FIELD_23
+      field-number: 23
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Card Sequence Number"
+    - field-name: FIELD_24
+      field-number: 24
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Function Code"
+    - field-name: FIELD_25
+      field-number: 25
+      field-type: n
+      field-length: 4
+      field-length-type: "fixed-length"
+      field-description: "Message Reason Code"
+    - field-name: FIELD_26
+      field-number: 26
+      field-type: n
+      field-length: 4
+      field-length-type: "fixed-length"
+      field-description: "Card Acceptor Business Type"
+    - field-name: FIELD_27
+      field-number: 27
+      field-type: n
+      field-length: 1
+      field-length-type: "fixed-length"
+      field-description: "Approval Code Length"
+    - field-name: FIELD_28
+      field-number: 28
+      field-type: n
+      field-length: 6
+      field-length-type: "fixed-length"
+      field-description: "Date, Reconciliation"
+    - field-name: FIELD_30
+      field-number: 30
+      field-type: n
+      field-length: 12
+      field-length-type: "fixed-length"
+      field-description: "Amount, Original"
+    - field-name: FIELD_32
+      field-number: 32
+      field-type: nllvar
+      field-length: 11
+      field-length-type: "variable-length"
+      field-description: "Acquiring Institution Identification Code"
+    - field-name: FIELD_33
+      field-number: 33
+      field-type: nllvar
+      field-length: 11
+      field-length-type: "variable-length"
+      field-description: "Forwarding Institution Identification Code"
+    - field-name: FIELD_35
+      field-number: 35
+      field-type: zllvar
+      field-length: 37
+      field-length-type: "variable-length"
+      field-description: "Track 2 Data"
+    - field-name: FIELD_37
+      field-number: 37
+      field-type: an
+      field-length: 12
+      field-length-type: "fixed-length"
+      field-description: "Retrieval Reference Number (RRN)"
+    - field-name: FIELD_38
+      field-number: 38
+      field-type: an
+      field-length: 6
+      field-length-type: "fixed-length"
+      field-description: "Approval Code"
+    - field-name: FIELD_39
+      field-number: 39
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Action Code"
+    - field-name: FIELD_40
+      field-number: 40
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Service Code"
+    - field-name: FIELD_41
+      field-number: 41
+      field-type: ans
+      field-length: 8
+      field-length-type: "fixed-length"
+      field-description: "Card Acceptor Terminal Identification"
+    - field-name: FIELD_42
+      field-number: 42
+      field-type: ans
+      field-length: 15
+      field-length-type: "fixed-length"
+      field-description: "Card Acceptor Identification Code"
+    - field-name: FIELD_43
+      field-number: 43
+      field-type: ansllvar
+      field-length: 99
+      field-length-type: "variable-length"
+      field-description: "Card Acceptor Name/Location"
+    - field-name: FIELD_44
+      field-number: 44
+      field-type: anslllvar
+      field-length: 999
+      field-length-type: "variable-length"
+      field-description: "Additional Response Data"
+    - field-name: FIELD_45
+      field-number: 45
+      field-type: ans
+      field-length: 76
+      field-length-type: "variable-length"
+      field-description: "Track 1 Data"
+    - field-name: FIELD_46
+      field-number: 46
+      field-type: anslllvar
+      field-length: 204
+      field-length-type: "variable-length"
+      field-description: "Amount, Fees"
+    - field-name: FIELD_48
+      field-number: 48
+      field-type: blllvar
+      field-length: 999
+      field-length-type: "variable-length"
+      field-description: "Additional Data, Private"
+    - field-name: FIELD_49
+      field-number: 49
+      field-type: n
+      field-length: 3
+      field-length-type: "fixed-length"
+      field-description: "Currency Code, Transaction"

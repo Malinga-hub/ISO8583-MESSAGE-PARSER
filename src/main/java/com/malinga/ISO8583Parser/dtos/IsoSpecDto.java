@@ -10,4 +10,5 @@ public class IsoSpecDto {
     private int fieldLength;
     private String fieldLengthType;
     private String fieldDescription;
+    private String fieldValue;
 }

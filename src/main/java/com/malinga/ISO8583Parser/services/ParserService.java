@@ -14,11 +14,10 @@ public class ParserService {
     private final Logger logger;
     private final SpecConfig specConfig;
 
-    public void parseMsg()
+    public IsoDto parseMsg()
     {
+        IsoDto isoDto = new IsoDto();
         try{
-            IsoDto isoDto = new IsoDto();
-
             String hexdump = "49 53 4f 38 35 38 33 2d 31 39 39 33 30 31 31 30 30 35 35 30 30\n" +
                     "11 00 f2 34 a7 51 a8 e0  9a 00 00 00 00 00 00 00   \n" +
                     "00 01 10 42 60 92 50 00  69 71 64 00 00 00 00 00   \n" +
@@ -50,9 +49,12 @@ public class ParserService {
             ParserUtils.setMessageHeaderData(specConfig, isoDto.getHexDump(), isoDto);
             ParserUtils.setMti(specConfig, isoDto.getHexDump(), isoDto);
             ParserUtils.setBitMap(specConfig, isoDto.getHexDump(), isoDto);
+            ParserUtils.processDataElements(specConfig, isoDto.getBitMapDto().getDataElementsPresent(), isoDto.getHexDump(), isoDto);
 
             logger.info("data: {}", isoDto);
         }
         catch (Exception ex){logger.error("error: {}", ex.toString());}
+
+        return isoDto;
     }
 }

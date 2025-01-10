@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-<p>parsing message..</p>
+<h1>ISO 8583 - PARSER</h1>
+<p>Results</p>
+<table>
+    <tr>
+        <th>FIELD NAME</th>
+        <th>FILE NUMBER</th>
+        <th>FILED TYPE</th>
+        <th>FIELD LENGTH</th>
+        <th>FIELD LENGTH TYPE</th>
+        <th>FIELD DESCRIPTION</th>
+        <th>FIELD VALUE</th>
+    </tr>
+    <tr th:each="dataObj : ${parsedData.dataElements}">
+        <td th:text="${dataObj.fieldName}"></td>
+        <td th:text="${dataObj.fieldNumber}"></td>
+        <td th:text="${dataObj.fieldType}"></td>
+        <td th:text="${dataObj.fieldLength}"></td>
+        <td th:text="${dataObj.fieldLengthType}"></td>
+        <td th:text="${dataObj.fieldDescription}"></td>
+        <td th:text="${dataObj.fieldValue}"></td>
+    </tr>
+</table>
 </body>
 </html>
